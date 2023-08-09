@@ -1,0 +1,75 @@
+body {
+  font-family: sans-serif;
+  margin: auto;
+}
+
+input {
+  border: none;
+  width: 280px;
+  padding: 6px 16px;
+  outline: none;
+}
+
+button {
+  border-radius: 8px;
+  border: none;
+  padding: 4px 16px;
+}
+
+button:hover {
+  background-color: #7a7a7a;
+  color: #fff;
+  cursor: pointer;
+}
+
+li {
+  margin-right: 8px;
+}
+
+
+.input-area {
+  border: 2px solid #79fc77;
+  width: 400px;
+  height: 30px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.incomplete-area {
+  border: 2px solid #8d9afe;
+  width: 400px;
+  min-height: 200px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.complete-area {
+  border: 2px solid #fe9d8a;
+  width: 400px;
+  min-height: 200px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.title {
+  text-align: center;
+  margin-top: 0;
+  font-weight: bold;
+  margin: 0; /* マージンをリセットして余白を消す */
+  padding: 4px; /* 余白を追加（任意の余白サイズ） */
+}
+
+.list-row {
+  display: flex;
+  align-items: center;
+  padding-bottom: 4px;
+}
+
+.add-button {
+  float: right;
+  height: 100;
+  margin-left: 10px;
+}
