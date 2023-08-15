@@ -1,10 +1,4 @@
-type Props = {
-  todos: string[];
-  onClickComplete: (index: number) => void;
-  onClickDelete: (index: number) => void;
-};
-
-export const IncompleteTodos = (props: Props) => {
+export const IncompleteTodos = (props) => {
   const { todos, onClickComplete, onClickDelete } = props;
   return (
     <>

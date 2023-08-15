@@ -1,16 +1,15 @@
-import { ChangeEvent, useState } from "react";
+import { useState } from "react";
+import "./style.css";
 import { InputTodo } from "./components/InputTodo";
 import { IncompleteTodos } from "./components/IncompleteTodos";
 import { CompleteTodos } from "./components/CompleteTodos";
-import "./style.css";
 
 export const App = () => {
   const [todoText, setTodoText] = useState("");
-  const [incompleteTodos, setIncompleteTodos] = useState<Array<string>>([]);
-  const [completeTodos, setCompleteTodos] = useState<Array<string>>([]);
+  const [incompleteTodos, setIncompleteTodos] = useState([]);
+  const [completeTodos, setCompleteTodos] = useState([]);
 
-  const onChangeTodoText = (event: ChangeEvent<HTMLInputElement>) =>
-    setTodoText(event.target.value);
+  const onChangeTodoText = (event) => setTodoText(event.target.value);
 
   const onClickAdd = () => {
     if (todoText === "") return;
@@ -19,14 +18,14 @@ export const App = () => {
     setTodoText("");
   };
 
-  const onClickDelete = (index: any) => {
+  const onClickDelete = (index) => {
     // スプレッド構文：...をつけることで、要素を順番に格納
     const newTodos = [...incompleteTodos];
     newTodos.splice(index, 1);
     setIncompleteTodos(newTodos);
   };
 
-  const onClickComplete = (index: any) => {
+  const onClickComplete = (index) => {
     const newIncompleteTodos = [...incompleteTodos];
     newIncompleteTodos.splice(index, 1);
 
@@ -35,7 +34,7 @@ export const App = () => {
     setCompleteTodos(newCompleteTodos);
   };
 
-  const onClickBack = (index: any) => {
+  const onClickBack = (index) => {
     const newCompleteTodos = [...completeTodos];
     newCompleteTodos.splice(index, 1);
 

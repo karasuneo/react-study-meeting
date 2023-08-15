@@ -1,7 +1,5 @@
-export const Button = () => {
-  const onClickAlert = () => {
-    alert("ボタンが押されました！");
-  };
+export const Button = (props) => {
+  const { onClick, children } = props;
 
-  return <button onClick={onClickAlert}>アラートを鳴らす</button>;
+  return <button onClick={onClick}>{children}</button>;
 };

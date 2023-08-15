@@ -1,9 +1,4 @@
-type Props = {
-  todos: string[];
-  onClickBack: (index: number) => void;
-};
-
-export const CompleteTodos = (props: Props) => {
+export const CompleteTodos = (props) => {
   const { todos, onClickBack } = props;
   return (
     <>
