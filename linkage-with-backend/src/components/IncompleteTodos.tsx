@@ -2,8 +2,8 @@ import { Todo } from "../types/todo";
 
 type Props = {
   todos: Todo[];
-  onClickComplete: (index: number) => void;
-  onClickDelete: (index: number) => void;
+  onClickComplete: (id: number) => void;
+  onClickDelete: (id: number) => void;
 };
 
 export function IncompleteTodos(props: Props) {

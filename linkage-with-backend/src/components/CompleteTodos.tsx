@@ -2,7 +2,7 @@ import { Todo } from "../types/todo";
 
 type Props = {
   todos: Todo[];
-  onClickBack: (index: number) => void;
+  onClickBack: (id: number) => void;
 };
 
 export function CompleteTodos(props: Props) {
