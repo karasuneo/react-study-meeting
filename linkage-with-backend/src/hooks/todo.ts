@@ -34,7 +34,7 @@ export const useTodo = () => {
     return data;
   };
 
-  const putCompleteTodo = async (id: number): Promise<Todo> => {
+  const putCompleteTodo = async (id: string): Promise<Todo> => {
     const response = await fetch(`http://localhost:8000/todo/complete/${id}`, {
       method: "PUT",
       headers: {
@@ -45,7 +45,7 @@ export const useTodo = () => {
     return data;
   };
 
-  const putInCompleteTodo = async (id: number): Promise<Todo> => {
+  const putInCompleteTodo = async (id: string): Promise<Todo> => {
     const response = await fetch(
       `http://localhost:8000/todo/uncomplete/${id}`,
       {
@@ -59,7 +59,7 @@ export const useTodo = () => {
     return data;
   };
 
-  const deleteTodo = async (id: number) => {
+  const deleteTodo = async (id: string) => {
     await fetch(`http://localhost:8000/todo/${id}`, {
       method: "DELETE",
     });

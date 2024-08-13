@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import "./style.css";
 import { InputTodo } from "./components/InputTodo";
 import { IncompleteTodos } from "./components/IncompleteTodos";
@@ -18,7 +18,7 @@ export function App() {
   } = useTodo();
   const [todoText, setTodoText] = useState("");
 
-  const onChangeTodoText = (event: React.ChangeEvent<HTMLInputElement>) =>
+  const onChangeTodoText = (event: ChangeEvent<HTMLInputElement>) =>
     setTodoText(event.target.value);
 
   const onClickAdd = async () => {
@@ -30,17 +30,17 @@ export function App() {
     setTodoText("");
   };
 
-  const onClickDelete = async (id: number) => {
+  const onClickDelete = async (id: string) => {
     await deleteTodo(id);
     await getTodos();
   };
 
-  const onClickComplete = async (id: number) => {
+  const onClickComplete = async (id: string) => {
     await putCompleteTodo(id);
     await getTodos();
   };
 
-  const onClickBack = async (id: number) => {
+  const onClickBack = async (id: string) => {
     await putInCompleteTodo(id);
     await getTodos();
   };

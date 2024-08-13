@@ -1,5 +1,5 @@
 export type Todo = {
-  id: number;
+  id: string;
   title: string;
   isComplete: boolean;
 };
@@ -9,13 +9,13 @@ export type GetTodoResponse = {
 };
 
 export type PostTodoResponse = {
-  id: number;
+  id: string;
   title: string;
   isComplete: boolean;
 };
 
 export type PutTodoResponse = {
-  id: number;
+  id: string;
   title: string;
   isComplete: boolean;
 };

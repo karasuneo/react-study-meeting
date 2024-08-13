@@ -1,24 +1,23 @@
-import { Todo } from "../types/todo";
-
 type Props = {
-  todos: Todo[];
-  onClickBack: (id: string) => void;
+  todos: string[];
+  onClickBack: (index: number) => void;
 };
 
-export function CompleteTodos(props: Props) {
+export const CompleteTodos = (props: Props) => {
   const { todos, onClickBack } = props;
   return (
     <>
       <div className="complete-area">
         <p className="title">完了のTODO</p>
         <ul>
-          {todos.map((todo) => {
+          {todos.map((todo, index) => {
             return (
-              <div key={todo.id} className="list-row">
-                <li>{todo.title}</li>
+              <div key={todo} className="list-row">
+                <li>{todo}</li>
+
                 <button
                   onClick={() => {
-                    onClickBack(todo.id);
+                    onClickBack(index);
                   }}
                 >
                   戻す
@@ -30,6 +29,4 @@ export function CompleteTodos(props: Props) {
       </div>
     </>
   );
-}
-
-export default CompleteTodos;
+};
